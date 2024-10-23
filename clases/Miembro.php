@@ -4,14 +4,14 @@
     protected $nombre;
     protected $apellidos;
     protected $email;
-    protected $edad;
+   
 
-    public function __construct($id,$nombre,$apellidos,$email,$edad){
+    public function __construct($id,$nombre,$apellidos,$email){
         $this->$id = $id;
         $this->$nombre=$nombre;
         $this->$apellidos=$apellidos;
         $this->$email=$email;
-        $this->edad=$edad;
+        
     }
 
 
@@ -96,20 +96,11 @@
     /**
      * Get the value of edad
      */
-    public function getEdad()
-    {
-        return $this->edad;
-    }
 
     /**
      * Set the value of edad
      */
-    public function setEdad($edad): self
-    {
-        $this->edad = $edad;
-
-        return $this;
-    }
+   
     public function __toString()
 {
     return  "Nombre: ".$this->nombre . " " . $this->apellidos  . "Email: " .  $this->email;
