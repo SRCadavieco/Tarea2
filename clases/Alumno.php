@@ -43,7 +43,7 @@ class Alumnos extends Miembro
 
     }
     public function crearAlumnosMuestra(){
-        $alumnosMuestra = array();
+        $alumnosMuestra=array();
 
 
 $a1 = new Alumnos(1, "Laura", "Martinez", "laura.martinez@email.com", 22);

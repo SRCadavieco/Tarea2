@@ -53,5 +53,32 @@
     </ul>
     </nav>
     </header>
+        <main>
+        <h3>Listado de Alumnos</h3>
+        <?php 
+         include("clases/Miembro.php");
+         include("clases/Alumno.php");
+         include("clases/Profesores.php");
+         include("clases/Asignaturas.php");
+        
+         $alumnos = new Alumnos(0,"","","",0);
+         $alumnosCreados=$alumnos ->crearAlumnosMuestra();
+         foreach ($alumnosCreados as $alumno){
+            echo $alumno . "<br>";
+         }
+        
+        ?>
+
+
+
+
+        </main>
+
+
+
+
+
+
+
 </body>
 </html>
