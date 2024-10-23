@@ -43,34 +43,42 @@ class Alumnos extends Miembro
 
     }
     public function crearAlumnosMuestra(){
-        $alumnosMuestra=array();
-        $a1 = new Alumnos(1,"Laura","Martinez"," laura.martinez@email.com",22);
-        $alumnosMuestra+=$a1;
-        $a2 = new Alumnos(2,"Sergio","Lopez"," sergio.lopez@email.com",25);
-        $alumnosMuestra+=$a2;
-        $a3 = new Alumnos(3,"Carlos","Garcia"," carlos.garcia@email.com",24);
-        $alumnosMuestra+=$a3;
-        $a4 = new Alumnos(4,"Marta","Sanchez"," marta.sanchez@email.com",23);
-        $alumnosMuestra+=$a4;
-        $a5 = new Alumnos(5,"Alba","Fernandez"," alba.fernandez@email.com",21);
-        $alumnosMuestra+=$a5;
-        $a6 = new Alumnos(6,"David","Rodriguez"," david.rodriguez@email.com",26);
-        $alumnosMuestra+=$a6;
-        $a7 = new Alumnos(7,"Laura","Martinez"," lucia.jimenez@email.com",20);
-        $alumnosMuestra+=$a7;
-        $a8 = new Alumnos(8, 'Jorge', 'Pérez', 'jorge.perez@email.com',22);
-        $alumnosMuestra+=$a8;
-        $a9 = new Alumnos(9, 'Elena', 'Romero', 'elena.romero@email.com',23);
-        $alumnosMuestra+=$a9;
-        $a10 = new Alumnos(10, 'Pablo', 'Torres', 'pablo.torres@email.com',24);
-        $alumnosMuestra+=$a10;
+        $alumnosMuestra = array();
+
+
+$a1 = new Alumnos(1, "Laura", "Martinez", "laura.martinez@email.com", 22);
+$alumnosMuestra[] = $a1;
+
+$a2 = new Alumnos(2, "Sergio", "Lopez", "sergio.lopez@email.com", 25);
+$alumnosMuestra[] = $a2;
+
+$a3 = new Alumnos(3, "Carlos", "Garcia", "carlos.garcia@email.com", 24);
+$alumnosMuestra[] = $a3;
+
+$a4 = new Alumnos(4, "Marta", "Sanchez", "marta.sanchez@email.com", 23);
+$alumnosMuestra[] = $a4;
+
+$a5 = new Alumnos(5, "Alba", "Fernandez", "alba.fernandez@email.com", 21);
+$alumnosMuestra[] = $a5;
+
+$a6 = new Alumnos(6, "David", "Rodriguez", "david.rodriguez@email.com", 26);
+$alumnosMuestra[] = $a6;
+
+$a7 = new Alumnos(7, "Laura", "Martinez", "lucia.jimenez@email.com", 20);
+$alumnosMuestra[] = $a7;
+
+$a8 = new Alumnos(8, "Jorge", "Pérez", "jorge.perez@email.com", 22);
+$alumnosMuestra[] = $a8;
+
+$a9 = new Alumnos(9, "Elena", "Romero", "elena.romero@email.com", 23);
+$alumnosMuestra[] = $a9;
+
+$a10 = new Alumnos(10, "Pablo", "Torres", "pablo.torres@email.com", 24);
+$alumnosMuestra[] = $a10;
+
         
 
-
-
-
-
-    }
+    return $alumnosMuestra;}
 
 
 }
