@@ -3,7 +3,7 @@ class Alumno extends Miembro
 {
     protected $asignaturas;
     protected $cursoabonado;
-    protected $edad;
+    public $edad; //Esta puesta en publica porque al ponerla en protected solo la podrian utilzar las clases e index que esten en la misma carpeta, pero al estar tanto el index como la clase Alumno en distintas carpetas tengo que ponerlas en publico
 
     public function __construct($id, $nombre, $apellidos, $email, $edad)
     {
@@ -81,7 +81,7 @@ $alumnosMuestra[] = $a10;
     return $alumnosMuestra;}
 
 public function __toString(){
-return parent::__toString(). "Edad ". $this->edad;
+return parent::__toString();
 
 }
 }

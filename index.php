@@ -96,6 +96,31 @@
 
 </ul>
 
+        <h3>Listado alumnos<=23 </h3>
+        <ul>
+        <?php 
+        
+        $filterAlum = array_filter($alumno->crearAlumnosMuestra(), function($alumno) {
+            return $alumno->edad <= 23; 
+        });
+        
+        foreach ($filterAlum as $alumno) {
+            echo "<li>$alumno</li>"; 
+        }
+        
+        
+        ?>
+
+
+
+
+
+        </ul>
+
+
+
+
+
 
 
         </main>
