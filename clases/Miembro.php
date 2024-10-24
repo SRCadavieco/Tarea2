@@ -7,10 +7,10 @@
    
 
     public function __construct($id,$nombre,$apellidos,$email){
-        $this->$id = $id;
-        $this->$nombre=$nombre;
-        $this->$apellidos=$apellidos;
-        $this->$email=$email;
+        $this->id = $id;
+        $this->nombre=$nombre;
+        $this->apellidos=$apellidos;
+        $this->email=$email;
         
     }
 
@@ -103,7 +103,7 @@
    
     public function __toString()
 {
-    return  "Nombre: ".$this->nombre . " " . $this->apellidos  . "Email: " .  $this->email;
+    return  "<b>Nombre: </b>".$this->nombre . " " . $this->apellidos  . " <b>Email: </b> " .  $this->email;
 }
     }
     

@@ -23,6 +23,10 @@ class Asignaturas {
 
     return $asignaturas;}
 
+    public function __tostring(){
+
+        return "<b>Nombre: </b> ".$this->nombre.", <b>Creditos: </b>". $this->creditos;
+    }
 
 
 

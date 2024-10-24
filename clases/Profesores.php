@@ -9,7 +9,7 @@ class Profesores extends Miembro{
         $this->asignatura=$asignatura;
     }
     function crearProfesoresDeMuestra(){
-        $profesores = array(); // Inicializas el array vacío
+        $profesores = array(); 
 
         $p1 = new Profesores(1, "Steve", "Wozniak", "steve@apple.com", "DWES");
         $profesores[] = $p1;
@@ -24,6 +24,10 @@ class Profesores extends Miembro{
         $profesores[] = $p4;
         
         return $profesores;}
+        public function __toString(){
+return parent::__toString();
+
+}
 
 
 

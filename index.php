@@ -8,12 +8,12 @@
         h1{
             text-align: center;
         }
-        ul{
+        nav>ul{
             display: flex;
             justify-content: center;
         }
         
-        li{
+        nav>ul>a>li{
             list-style:none;
             margin: 0.75 rem;
             padding: 5px;
@@ -55,20 +55,46 @@
     </header>
         <main>
         <h3>Listado de Alumnos</h3>
+        <ul>
         <?php 
          include("clases/Miembro.php");
          include("clases/Alumno.php");
          include("clases/Profesores.php");
          include("clases/Asignaturas.php");
         
-         $alumnos = new Alumnos(0,"","","",0);
-         $alumnosCreados=$alumnos ->crearAlumnosMuestra();
+         $alumno = new Alumno(0,"","","",0);
+         $alumnosCreados  = $alumno ->crearAlumnosMuestra();
+         
          foreach ($alumnosCreados as $alumno){
-            echo $alumno . "<br>";
+            echo "<li>".$alumno . "</li>";
          }
-        
         ?>
+        </ul>
 
+        <h3>Listado Profesores</h3>
+        <ul>
+        
+        <?php 
+        $profesor = new Profesores(0,"","","",0);
+        $profesoresCreados = $profesor ->crearProfesoresDeMuestra(); 
+        foreach ($profesoresCreados as $profesor){
+           echo "<li>".$profesor . "</li>";
+        }
+        ?>
+        </ul>
+
+
+        <h3>Listado de Asignaturas</h3>
+        <ul>
+        <?php 
+        $asignaturas = new Asignaturas(0,"",0);
+        $asignaturasCreadas = $asignaturas ->crearAsignaturasDeMuestra();
+        foreach ($asignaturasCreadas as $asignatura){
+           echo "<li>".$asignatura . "</li>";
+        }
+       ?>
+
+</ul>
 
 
 
