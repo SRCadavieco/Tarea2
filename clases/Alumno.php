@@ -20,14 +20,14 @@ class Alumno extends Miembro
         return $cursoabonado;
     }
 
-    public function matricularseEnAsignatura($idAsignatura): array
+    public function matricularEnAsignatura($idAsignatura): array
     {
-
+        $Repetido = false;
         for ($i = 0; $i < sizeof($this->asignaturas); $i++) {
-            $Repetido = false;
+          
 
             if ($this->asignaturas[$i] == $idAsignatura) { //Lo que hace esto es que nos comprueba que si el array en la posicon $i es igual al id de la asignatura nos mostrara un mensaje de error y parará el bucle y devolvera el array como estaba al principio 
-                echo "Este alumno ya se ha matriculado de esta asignatura";
+                //echo "Este alumno ya se ha matriculado de esta asignatura";
                 $Repetido = true;
                 break;
             }
