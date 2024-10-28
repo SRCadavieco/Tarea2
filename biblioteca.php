@@ -8,12 +8,12 @@
         h1{
             text-align: center;
         }
-        ul{
+        nav>ul{
             display: flex;
             justify-content: center;
         }
         
-        li{
+        nav>ul>a>li{
             list-style:none;
             margin: 0.75 rem;
             padding: 5px;
@@ -119,6 +119,18 @@
         }
         ?>
         </table>
+        <h2>Libros de categoria 'Desarrollo Web'</h2>
+        <ul>
+        <?php 
+        $filterLib= array_filter($libros, function($libro){
+            return $libro['categoria'] =="Desarrollo web";
+        });
+        foreach($filterLib as $libro){
+            echo "<li>".$libro['titulo']."</li>";
+
+        }
+        ?>
+        </ul>
 
 
 
