@@ -42,7 +42,7 @@ class Alumno extends Miembro
         array_diff($this->asignaturas,$idAsignatura);
 
     }
-    public function crearAlumnosMuestra(): array{
+    public static function crearAlumnosMuestra(): array{
         $alumnosMuestra=array();
 
 

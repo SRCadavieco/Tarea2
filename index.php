@@ -66,9 +66,7 @@
             include("clases/Profesores.php");
             include("clases/Asignaturas.php");
 
-            $alumno = new Alumno(0, "", "", "", 0);
-            $alumnos  = $alumno->crearAlumnosMuestra();
-
+            $alumnos=Alumno::crearAlumnosMuestra();//Lo que hace esto es Llamar a la clase asignaturas, con los :: llama a los metodos estaticos de la clase, en este caso crearAlumnosMuestra
             foreach ($alumnos as $alumno) {
                 echo "<li>" . $alumno . "</li>";
             }
@@ -79,8 +77,7 @@
         <ul>
 
             <?php
-            $profesor = new Profesores(0, "", "", "", 0);
-            $profesoresCreados = $profesor->crearProfesoresDeMuestra();
+            $profesoresCreados=Profesores::crearProfesoresDeMuestra();
             foreach ($profesoresCreados as $profesor) {
                 echo "<li>" . $profesor . "</li>";
             }
@@ -91,12 +88,10 @@
         <h3>Listado de Asignaturas</h3>
         <ul>
             <?php
-
             
-            $asignaturas = new Asignaturas(0, "", 0);
-            $asignatura = $asignaturas->crearAsignaturasDeMuestra();
-            foreach ($asignatura as $asignaturas) {
-                echo "<li>" . $asignaturas . "</li>";
+            $asignaturas = Asignaturas::crearAsignaturasDeMuestra(); 
+            foreach ($asignaturas as $asignatura) {
+                echo "<li>" . $asignatura . "</li>";
             }
         
 
@@ -126,21 +121,21 @@
                     
 
 
-                    $alumnos[0]->matricularEnAsignatura($asignatura[0]);  
-                    $alumnos[1]->matricularEnAsignatura($asignatura[0]);  
-                    $alumnos[1]->matricularEnAsignatura($asignatura[1]);  
-                    $alumnos[2]->matricularEnAsignatura($asignatura[0]);  
-                    $alumnos[2]->matricularEnAsignatura($asignatura[2]);  
-                    $alumnos[3]->matricularEnAsignatura($asignatura[0]);  
-                    $alumnos[4]->matricularEnAsignatura($asignatura[0]);  
-                    $alumnos[4]->matricularEnAsignatura($asignatura[1]);  
-                    $alumnos[4]->matricularEnAsignatura($asignatura[2]);  
-                    $alumnos[5]->matricularEnAsignatura($asignatura[0]);  
-                    $alumnos[6]->matricularEnAsignatura($asignatura[1]);  
-                    $alumnos[6]->matricularEnAsignatura($asignatura[1]);  
-                    $alumnos[7]->matricularEnAsignatura($asignatura[2]);  
-                    $alumnos[8]->matricularEnAsignatura($asignatura[1]);  
-                    $alumnos[9]->matricularEnAsignatura($asignatura[0]);
+                    $alumnos[0]->matricularEnAsignatura($asignaturas[0]);  
+                    $alumnos[1]->matricularEnAsignatura($asignaturas[0]);  
+                    $alumnos[1]->matricularEnAsignatura($asignaturas[1]);  
+                    $alumnos[2]->matricularEnAsignatura($asignaturas[0]);  
+                    $alumnos[2]->matricularEnAsignatura($asignaturas[2]);  
+                    $alumnos[3]->matricularEnAsignatura($asignaturas[0]);  
+                    $alumnos[4]->matricularEnAsignatura($asignaturas[0]);  
+                    $alumnos[4]->matricularEnAsignatura($asignaturas[1]);  
+                    $alumnos[4]->matricularEnAsignatura($asignaturas[2]);  
+                    $alumnos[5]->matricularEnAsignatura($asignaturas[0]);  
+                    $alumnos[6]->matricularEnAsignatura($asignaturas[1]);  
+                    $alumnos[6]->matricularEnAsignatura($asignaturas[1]);  
+                    $alumnos[7]->matricularEnAsignatura($asignaturas[2]);  
+                    $alumnos[8]->matricularEnAsignatura($asignaturas[1]);  
+                    $alumnos[9]->matricularEnAsignatura($asignaturas[0]);
                         $filterAsig = array_filter($alumnos, function ($alumno) {
                                 return count($alumno->asignaturas) >= 2; //Cuenta el numero de asignaturas en las que un alumno esta matriculado y si esto es mayor o igual a dos nos lo devuelve.
                         }
