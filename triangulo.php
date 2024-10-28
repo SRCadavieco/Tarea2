@@ -33,6 +33,8 @@
             background-color: #c8c8c8;
         }
 
+
+
     </style>
 </head>
 <body>
@@ -53,7 +55,15 @@
     </ul>
     </nav>
     </header>
-
+    <pre><!-- Pongo el <pre> para que los espacios en blanco me los cuente y no los rellene  -->
+        <?php 
+            include("clases/Trianglegenerator.php");
+            echo triangleGenerator(8);
+        
+        
+        
+        ?>
+        </pre>
 
 
     
