@@ -147,32 +147,22 @@
         </ul>
         <h3>Asignaturas con algun alumno matriculado</h3>
         <ul>
-            <?php 
-            $filterAlumAsig = array_filter($alumno,function($alumno){
-                count($alumno->asignatura)>0;
+            <?php
+            $asignaturasMatriculadas = []; 
+            foreach ($alumnos as $alumno) {
+                    foreach ($alumno->asignaturas as $asignatura) {
+                       
+                        if (!in_array($asignatura, $asignaturasMatriculadas)) {
+                            $asignaturasMatriculadas[] = $asignatura;
+                        }
+                    }
                 
-
-
-            })
-            
-            
-            
-            
-            
-            
+            }
+            foreach ($asignaturasMatriculadas as $asignatura) {
+                echo "<li>" . $asignatura . "</li>";}
             ?>
-
-
-
-
-
-
-
-
-
-
         </ul>
-
+            
 
 
 
