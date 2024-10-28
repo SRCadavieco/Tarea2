@@ -33,6 +33,15 @@
             background-color: #c8c8c8;
         }
 
+
+    table, tr,td,th{
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px;
+
+    }
+  
+
     </style>
 </head>
 <body>
@@ -53,5 +62,70 @@
     </ul>
     </nav>
     </header>
+        <?php 
+        $libros = [  
+            "libro1" => [  
+                "titulo" => "PHP para Principiantes",  
+                "autor" => "Carlos Ruiz",  
+                "precio" => 19.99,  
+                "categoria" => "Desarrollo web"  
+            ],  
+            "libro2" => [  
+                "titulo" => "JavaScript Avanzado",  
+                "autor" => "Laura García",  
+                "precio" => 25.99,  
+                "categoria" => "Desarrollo web"  
+            ],  
+            "libro3" => [  
+                "titulo" => "Algoritmos en Python",  
+                "autor" => "Miguel Fernández",  
+                "precio" => 29.99,  
+                "categoria" => "Algoritmos"  
+            ]  
+        ];
+
+
+        
+        
+        
+        
+        
+        ?>
+        <h2>Informacion De Todos Los Libros</h2>
+        <table >
+        <tr>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Precio</th>
+            <th>Categoria</th>
+
+
+
+        </tr>
+
+
+
+        <?php 
+        foreach ($libros as $libro) {
+            echo "<tr>";
+            echo "<td>".$libro["titulo"]."</td>";
+            echo "<td>".$libro["autor"]."</td>";
+            echo "<td>".$libro["precio"]."</td>";
+            echo "<td>".$libro["categoria"]."</td>";
+   
+            echo "</tr>";
+
+
+        }
+        ?>
+        </table>
+
+
+
+
+
+
+
+
 </body>
 </html>
