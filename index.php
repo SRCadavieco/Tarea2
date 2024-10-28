@@ -91,10 +91,12 @@
         <h3>Listado de Asignaturas</h3>
         <ul>
             <?php
+
+            
             $asignaturas = new Asignaturas(0, "", 0);
-            $asignaturasCreadas = $asignaturas->crearAsignaturasDeMuestra();
-            foreach ($asignaturasCreadas as $asignatura) {
-                echo "<li>" . $asignatura . "</li>";
+            $asignatura = $asignaturas->crearAsignaturasDeMuestra();
+            foreach ($asignatura as $asignaturas) {
+                echo "<li>" . $asignaturas . "</li>";
             }
         
 
@@ -124,31 +126,51 @@
                     
 
 
-            $alumnos[0]->matricularEnAsignatura(0);
-            $alumnos[1]->matricularEnAsignatura(0);
-            $alumnos[1]->matricularEnAsignatura(1);
-            $alumnos[2]->matricularEnAsignatura(0);
-            $alumnos[2]->matricularEnAsignatura(2);
-            $alumnos[3]->matricularEnAsignatura(0);
-            $alumnos[4]->matricularEnAsignatura(0);
-            $alumnos[4]->matricularEnAsignatura(1);
-            $alumnos[4]->matricularEnAsignatura(2);
-            $alumnos[5]->matricularEnAsignatura(0);
-            $alumnos[6]->matricularEnAsignatura(1);
-            $alumnos[6]->matricularEnAsignatura(1);
-            $alumnos[7]->matricularEnAsignatura(2);
-            $alumnos[8]->matricularEnAsignatura(1);
-            $alumnos[9]->matricularEnAsignatura(0);
-                        $filterAsig = array_filter($alumno->$asignatura[0], function ($alumno) {
-                                return $alumno->asignaturas >=2;
+                    $alumnos[0]->matricularEnAsignatura($asignatura[0]);  
+                    $alumnos[1]->matricularEnAsignatura($asignatura[0]);  
+                    $alumnos[1]->matricularEnAsignatura($asignatura[1]);  
+                    $alumnos[2]->matricularEnAsignatura($asignatura[0]);  
+                    $alumnos[2]->matricularEnAsignatura($asignatura[2]);  
+                    $alumnos[3]->matricularEnAsignatura($asignatura[0]);  
+                    $alumnos[4]->matricularEnAsignatura($asignatura[0]);  
+                    $alumnos[4]->matricularEnAsignatura($asignatura[1]);  
+                    $alumnos[4]->matricularEnAsignatura($asignatura[2]);  
+                    $alumnos[5]->matricularEnAsignatura($asignatura[0]);  
+                    $alumnos[6]->matricularEnAsignatura($asignatura[1]);  
+                    $alumnos[6]->matricularEnAsignatura($asignatura[1]);  
+                    $alumnos[7]->matricularEnAsignatura($asignatura[2]);  
+                    $alumnos[8]->matricularEnAsignatura($asignatura[1]);  
+                    $alumnos[9]->matricularEnAsignatura($asignatura[0]);
+                        $filterAsig = array_filter($alumnos, function ($alumno) {
+                                return count($alumno->asignaturas) >= 2; //Cuenta el numero de asignaturas en las que un alumno esta matriculado y si esto es mayor o igual a dos nos lo devuelve.
                         }
                         );
                         foreach($filterAsig as $alumno) {
                             echo "<li>$alumno</li>";
                         }
-
-                    
                     ?>
+        </ul>
+        <h3>Asignaturas con algun alumno matriculado</h3>
+        <ul>
+            <?php 
+            $filterAlumAsig = array_filter($alumno,function($alumno){
+                count($alumno->asignatura)>0;
+                
+
+
+            })
+            
+            
+            
+            
+            
+            
+            ?>
+
+
+
+
+
 
 
 

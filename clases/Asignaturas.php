@@ -10,15 +10,15 @@ class Asignaturas {
         $this->creditos=$creditos;
     }
 
-    public function crearAsignaturasDeMuestra(){
+    public static function crearAsignaturasDeMuestra(){
         $asignaturas = array();
         $asig1 = new Asignaturas(1,"DWES",7);
         $asignaturas[]= $asig1;
         $asig2 = new Asignaturas(2,"DWEC",6);
         $asignaturas[]= $asig2;
-        $asig3 = new Asignaturas(2,"DIW",4);
+        $asig3 = new Asignaturas(3,"DIW",4);
         $asignaturas[]=$asig3;
-        $asig4 = new Asignaturas(4,"DIW",4);
+        $asig4 = new Asignaturas(4,"DAW",4);
         $asignaturas []= $asig4;
 
     return $asignaturas;}

@@ -1,7 +1,7 @@
 <?php
 class Alumno extends Miembro
 {
-    protected $asignaturas;
+    public $asignaturas;
     protected $cursoabonado;
     public $edad; //Esta puesta en publica porque al ponerla en protected solo la podrian utilzar las clases e index que esten en la misma carpeta, pero al estar tanto el index como la clase Alumno en distintas carpetas tengo que ponerlas en publico
 
